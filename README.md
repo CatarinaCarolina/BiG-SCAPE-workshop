@@ -45,6 +45,14 @@ Once this is done running, open the index.html in your output folder. You will b
 
 Select the .db file inside your output folder. It should have the same name as your output folder, so in the example command above it should be `JK1_tutorial_out.db`.
 
+When you do so, you will be presented with an overview page of the results of this run. This page contains some statistics on the run itself and the networks that resulted from the run.
+
+To explore the networks generated in the run, click on the "network" button at the top-left of the page.
+
+This section of the results will show a list of connected components on the left side. Clicking on any one of them will visualize these in a graph individually.
+
+Alternatively, you can click "vizualize all" to visualize all the connected components in one graph. Note that if the graph is too large, it may not be able to display on your machine.
+
 [This section](https://github.com/medema-group/BiG-SCAPE/wiki/02.-BiG-SCAPE-Workflows#output-interactive-visualization) contains an overview of all the exploration options that are available.
 
 Now let's add a few higher distance cutoffs, and see how the GCF architectures might change.
