@@ -7,9 +7,9 @@ This section contains a few simple use case tutorials that are meant to get a be
 
 ### BiG-SCAPE Cluster
 
-[Install BiG-SCAPE](01.-Installing-and-Running-BiG-SCAPE) and download (and unzip) this [dataset](https://zenodo.org/records/14446826).
+[Install BiG-SCAPE](https://github.com/medema-group/BiG-SCAPE/wiki/01.-Installing-and-Running-BiG-SCAPE) and download (and unzip) this [dataset](https://zenodo.org/records/14446826).
 
-Now lets actually run BiG-SCAPE 2. The first command should take approximately 1 minute, and will let you explore both a mix bin, where all BGC records are compared to each other in a pairwise manner, as well as antiSMASH product category based bins, where BGC records are grouped by their respective categories. Let [this section](02.-BiG-SCAPE-Workflows#output-interactive-visualization) be your guide in these explorations.
+Now lets actually run BiG-SCAPE 2. The first command should take approximately 1 minute, and will let you explore both a mix bin, where all BGC records are compared to each other in a pairwise manner, as well as antiSMASH product category based bins, where BGC records are grouped by their respective categories. Let [this section](https://github.com/medema-group/BiG-SCAPE/wiki/02.-BiG-SCAPE-Workflows#output-interactive-visualization) be your guide in these explorations.
 
 ```
 bigscape cluster -i JK1_tutorial/ -o JK1_tutorial_out -p pfam/Pfam-A.hmm --mix
@@ -21,7 +21,7 @@ Now let's add a few higher distance cutoffs, and see how the GCF architectures m
 bigscape cluster -i JK1_tutorial/ -o JK1_tutorial_out -p pfam/Pfam-A.hmm --mix --gcf-cutoffs 0.5,0.8
 ```
 
-With the next command you will re-run the same dataset, but this time using the `protocluster` [record type](05.-antiSMASH-Record-Types), instead of the default `region`. Try finding the GCFs that are linked by topological links. (Hint: you need to search in the `mix` bin). To help us find this run quicker in the UI’s Run dropdown, we will also add a label.
+With the next command you will re-run the same dataset, but this time using the `protocluster` [record type](https://github.com/medema-group/BiG-SCAPE/wiki/05.-antiSMASH-Record-Types), instead of the default `region`. Try finding the GCFs that are linked by topological links. (Hint: you need to search in the `mix` bin). To help us find this run quicker in the UI’s Run dropdown, we will also add a label.
 
 ```
 bigscape cluster -i JK1_tutorial/ -o JK1_tutorial_out -p /pfam/Pfam-A.hmm --mix --record-type protocluster --label protocluster
@@ -45,7 +45,7 @@ The previous `bigscape query` run will only calculate distances between the quer
 bigscape query -i JK1_tutorial/ -o JK1_tutorial_out -p pfam/Pfam-A.hmm --query-bgc-path JK1_tutorial/Other_records/JCM_4504.region30.gbk --propagate
 ```
 
-Finally, `bigscape query` can also be used with any specific [record type](05.-antiSMASH-Record-Types). In the case that we select a record type other than `region`, we must also 
+Finally, `bigscape query` can also be used with any specific [record type](https://github.com/medema-group/BiG-SCAPE/wiki/05.-antiSMASH-Record-Types). In the case that we select a record type other than `region`, we must also 
 
 ```
 query -i JK1_tutorial/ -o JK1_tutorial_out -p pfam/Pfam-A.hmm --query-bgc-path JK1_tutorial/Other_records/JCM_4504.region30.gbk --record-type protocluster --query-record-number 2
@@ -59,7 +59,7 @@ query -i JK1_tutorial/ -o JK1_tutorial_out -p pfam/Pfam-A.hmm --query-bgc-path J
 bigscape cluster -i JK1_tutorial/ -o JK1_tutorial_out_mix -p pfam/Pfam-A.hmm --mix --classify none
 ```
 
-In the tutorial folder, we have already provided you with a random subset of GCF assignments, you will use these to run `bigscape benchmark`. Have a look at the [output description](02.-BiG-SCAPE-Workflows#output) and explore the output.
+In the tutorial folder, we have already provided you with a random subset of GCF assignments, you will use these to run `bigscape benchmark`. Have a look at the [output description](https://github.com/medema-group/BiG-SCAPE/wiki/02.-BiG-SCAPE-Workflows) and explore the output.
 
 ```
 bigscape benchmark --BiG-dir JK1_tutorial_out_mix -o JK1_tutorial_benchmark_out --GCF-assignment-file JK1_tutorial/JK1_GCF_assigmnents.tsv
@@ -165,7 +165,7 @@ Let’s do one more run, this time making sure to include singleton nodes in the
 bigscape cluster -i JK1_tutorial/ -o JK1_tutorial_out_mix/ -p /pfam/Pfam-A.hmm --mix --classify none --include-singletons
 ```
 
-To visualize the entire network, with its singletons, toggle `Visualize all` in the Network section of the [output visualization](02.-BiG-SCAPE-Workflows#output-interactive-visualization).
+To visualize the entire network, with its singletons, toggle `Visualize all` in the Network section of the [output visualization](https://github.com/medema-group/BiG-SCAPE/wiki/02.-BiG-SCAPE-Workflows#output-interactive-visualization).
 
 To obtain a similar network in Cytoscape, follow these steps:
 
