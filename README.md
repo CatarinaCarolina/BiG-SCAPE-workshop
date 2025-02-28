@@ -112,6 +112,16 @@ Finally, `bigscape query` can also be used with any specific [record type](https
 query -i JK1_tutorial/ -o JK1_tutorial_out -p pfam/Pfam-A.hmm --query-bgc-path JK1_tutorial/Other_records/JCM_4504.region30.gbk --record-type protocluster --query-record-number 2
 ```
 
+If you still have time, there is a more advanced usage of this mode where it is used to query which of the input BGCs are similar to a MIBiG BGC.
+
+In order to use this, you will need to download a GBK file corresponding to the MIBiG entry you want to query. These files can be found [here](https://dl.secondarymetabolites.org/mibig/).
+Find or generate an AntiSMASH processed GBK of the MIBiG entry with ID BGC0000664, then use this GBK in the `--query-bgc-path` parameter.
+
+
+```
+query -i JK1_tutorial/ -o JK1_tutorial_out -p pfam/Pfam-A.hmm --query-bgc-path path_to_gbk/your_gbk_here.gbk --mix
+```
+
 ### BiG-SCAPE Benchmark
 
 `bigscape benchmark` is designed for checking how well BiG-SCAPE groups BGCs into families, provided you, the user, has a curated/predefined set of BGC -> GCF assignments. Furthermore, `bigscape benchmark` has only been developed to work with a `bigscape cluster` `mix` mode run, in which the input BGC records are compared in an all-vs-all manner. So let’s first re-run `bigscape cluster`.
