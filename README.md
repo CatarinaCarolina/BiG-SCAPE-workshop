@@ -115,11 +115,11 @@ query -i JK1_tutorial/ -o JK1_tutorial_out -p pfam/Pfam-A.hmm --query-bgc-path J
 If you still have time, there is a more advanced usage of this mode where it is used to query which of the input BGCs are similar to a MIBiG BGC.
 
 In order to use this, you will need to download a GBK file corresponding to the MIBiG entry you want to query. These files can be found [here](https://dl.secondarymetabolites.org/mibig/).
-Find or generate an AntiSMASH processed GBK of the MIBiG entry with ID BGC0000664, then use this GBK in the `--query-bgc-path` parameter.
+Find or generate an antiSMASH processed GBK of the MIBiG entry with ID BGC0000664, then use this GBK in the `--query-bgc-path` parameter.
 
 
 ```
-query -i JK1_tutorial/ -o JK1_tutorial_out -p pfam/Pfam-A.hmm --query-bgc-path path_to_gbk/your_gbk_here.gbk --mix
+query -i JK1_tutorial/ -o JK1_tutorial_out -p pfam/Pfam-A.hmm --query-bgc-path path_to_gbk/your_gbk_here.gbk
 ```
 
 ### BiG-SCAPE Benchmark
