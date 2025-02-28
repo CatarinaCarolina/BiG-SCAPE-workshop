@@ -1,9 +1,7 @@
 # BiG-SCAPE-workshop
 Expanded tutorial materials created for genome mining with BiG-SCAPE 2.0
 
-Tutorials
-
-This section contains a few simple use case tutorials that are meant to get a beginner user started with BiG-SCAPE 2. However, this is by all means not a comprehensive list of all the functionality that BiG-SCAPE 2 offers. 
+ADD INTRO
 
 ### BiG-SCAPE Cluster
 
