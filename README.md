@@ -134,7 +134,7 @@ If you have made it to this part of the tutorial, you might have noticed that so
 
 To aid with this process, we have compiled a small list of SQL queries that we have found useful in the past. In any case, if you are completely new to SQL, we advise doing some SQL specific tutorials first.
 
-We assume that you have a DB browser already installed, and are exploring any of the DBs generated in the tutorials above.
+We assume that you have a DB browser already installed (here is an [example](https://sqlitebrowser.org/)), and are exploring any of the DBs generated in the tutorials above.
 
 #### Selecting all records from a (list of) families
 
