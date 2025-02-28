@@ -33,6 +33,8 @@ Commands:
 - Unzipped the Pfam-A models somewhere and remembered its location
 - Unzipped the example data somewhere and remembered its location
 
+#### Running BiG-SCAPE 2
+
 Now lets actually run BiG-SCAPE 2. The first command should take approximately 1 minute, and will let you explore both a mix bin, where all BGC records are compared to each other in a pairwise manner, as well as antiSMASH product category based bins, where BGC records are grouped by their respective categories.
 
 In the following command, replace JK1_tutorial with the location of your example data, and pfam/Pfam-A.hmm with the location of your extracted PFAM models.
@@ -41,6 +43,8 @@ You can specify any location you wish for the `-o JK1_tutorial_out` parameter. T
 ```
 bigscape cluster -i JK1_tutorial/ -o JK1_tutorial_out -p pfam/Pfam-A.hmm --mix
 ```
+
+#### Exploring results
 
 Once this is done running, open the index.html in your output folder. You will be prompted to select a database to read from.
 
@@ -56,6 +60,8 @@ Alternatively, you can click "vizualize all" to visualize all the connected comp
 
 [This section](https://github.com/medema-group/BiG-SCAPE/wiki/02.-BiG-SCAPE-Workflows#output-interactive-visualization) contains an overview of all the exploration options that are available.
 
+#### Setting cutoff values
+
 Now let's add a few higher distance cutoffs, and see how the GCF architectures might change.
 
 ```
@@ -67,6 +73,8 @@ Re-open the index.html file inside the output folder. Or, if you still have the 
 You will be prompted to open a database again. Do so and you will be shown the results of your latest BiG-SCAPE run under one of the selected cutoffs.
 
 Use the drop-down menu in the top-right to select a different cutoff. Run labels in this dropdown menu are suffixed with the selected cutoff (e.g. `_c0.5` for a cutoff of 0.5)
+
+#### Selecting record types
 
 With the next command you will re-run the same dataset, but this time using the `protocluster` [record type](https://github.com/medema-group/BiG-SCAPE/wiki/05.-antiSMASH-Record-Types), instead of the default `region`.
 
