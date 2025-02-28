@@ -33,13 +33,14 @@ Commands:
 - Unzipped the Pfam-A models somewhere and remembered its location
 - Unzipped the example data somewhere and remembered its location
 
-Now lets actually run BiG-SCAPE 2. The first command should take approximately 1 minute, and will let you explore both a mix bin, where all BGC records are compared to each other in a pairwise manner, as well as antiSMASH product category based bins, where BGC records are grouped by their respective categories:
+Now lets actually run BiG-SCAPE 2. The first command should take approximately 1 minute, and will let you explore both a mix bin, where all BGC records are compared to each other in a pairwise manner, as well as antiSMASH product category based bins, where BGC records are grouped by their respective categories.
+
+In the following command, replace JK1_tutorial with the location of your example data, and pfam/Pfam-A.hmm with the location of your extracted PFAM models.
+You can specify any location you wish for the `-o JK1_tutorial_out` parameter. This specifies in what directory the output data will end up.
 
 ```
 bigscape cluster -i JK1_tutorial/ -o JK1_tutorial_out -p pfam/Pfam-A.hmm --mix
 ```
-Replace JK1_tutorial with the location of your example data, and pfam/Pfam-A.hmm with the location of your extracted PFAM models.
-You can specify any location you wish for the `-o JK1_tutorial_out` parameter. This specifies in what directory the output data will end up.
 
 Once this is done running, open the index.html in your output folder. You will be prompted to select a database to read from.
 
@@ -61,7 +62,19 @@ Now let's add a few higher distance cutoffs, and see how the GCF architectures m
 bigscape cluster -i JK1_tutorial/ -o JK1_tutorial_out -p pfam/Pfam-A.hmm --mix --gcf-cutoffs 0.5,0.8
 ```
 
-With the next command you will re-run the same dataset, but this time using the `protocluster` [record type](https://github.com/medema-group/BiG-SCAPE/wiki/05.-antiSMASH-Record-Types), instead of the default `region`. Try finding the GCFs that are linked by topological links. (Hint: you need to search in the `mix` bin). To help us find this run quicker in the UI’s Run dropdown, we will also add a label.
+Re-open the index.html file inside the output folder. Or, if you still have the original output open, refresh the page.
+
+You will be prompted to open a database again. Do so and you will be shown the results of your latest BiG-SCAPE run under one of the selected cutoffs.
+
+Use the drop-down menu in the top-right to select a different cutoff. Run labels in this dropdown menu are suffixed with the selected cutoff (e.g. `_c0.5` for a cutoff of 0.5)
+
+With the next command you will re-run the same dataset, but this time using the `protocluster` [record type](https://github.com/medema-group/BiG-SCAPE/wiki/05.-antiSMASH-Record-Types), instead of the default `region`.
+
+This mode compares pairs BGCs on a protocluster level, instead of a region level. Since regions may have multiple protoclusters, this can produce some interesting results where two protoclusters from the same region end up in different connected components.
+
+Such pairs are still linked in the graph view by a "topological link", indicating that they share the same region.
+
+Try finding the GCFs that are linked by topological links. (Hint: you need to search in the `mix` bin). To help us find this run quicker in the UI’s Run dropdown, we will also add a label.
 
 ```
 bigscape cluster -i JK1_tutorial/ -o JK1_tutorial_out -p /pfam/Pfam-A.hmm --mix --record-type protocluster --label protocluster
