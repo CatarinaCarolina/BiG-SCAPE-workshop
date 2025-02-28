@@ -7,11 +7,45 @@ ADD INTRO
 
 [Install BiG-SCAPE](https://github.com/medema-group/BiG-SCAPE/wiki/01.-Installing-and-Running-BiG-SCAPE) and download (and unzip) this [dataset](https://zenodo.org/records/14446826).
 
-Now lets actually run BiG-SCAPE 2. The first command should take approximately 1 minute, and will let you explore both a mix bin, where all BGC records are compared to each other in a pairwise manner, as well as antiSMASH product category based bins, where BGC records are grouped by their respective categories. Let [this section](https://github.com/medema-group/BiG-SCAPE/wiki/02.-BiG-SCAPE-Workflows#output-interactive-visualization) be your guide in these explorations.
+At the end of setup, you should have:
+- Installed BiG-SCAPE 2.0 and be able to run it from anywhere by running the command `bigscape`. The output should look something like this:
+```
+(bigscape) drais008@~/src/BiG-SCAPE dev$ bigscape
+Usage: bigscape [OPTIONS] COMMAND [ARGS]...
+
+  BiG-SCAPE
+
+  Biosynthetic Gene Similarity Clustering and Prospecting Engine.
+
+  BiG-SCAPE can be run in three modes: cluster, query, and benchmark.
+  See the help menu for each mode for more information.
+  For a more comprehensive help menu and tutorials see GitHub Wiki.
+
+Options:
+  --version
+  -h, --help  Show this message and exit.
+
+Commands:
+  cluster    BiG-SCAPE - CLUSTER
+  query      BiG-SCAPE - QUERY
+  benchmark  BiG-SCAPE - BENCHMARK
+```
+- Unzipped the Pfam-A models somewhere and remembered its location
+- Unzipped the example data somewhere and remembered its location
+
+Now lets actually run BiG-SCAPE 2. The first command should take approximately 1 minute, and will let you explore both a mix bin, where all BGC records are compared to each other in a pairwise manner, as well as antiSMASH product category based bins, where BGC records are grouped by their respective categories:
 
 ```
 bigscape cluster -i JK1_tutorial/ -o JK1_tutorial_out -p pfam/Pfam-A.hmm --mix
 ```
+Replace JK1_tutorial with the location of your example data, and pfam/Pfam-A.hmm with the location of your extracted PFAM models.
+You can specify any location you wish for the `-o JK1_tutorial_out` parameter. This specifies in what directory the output data will end up.
+
+Once this is done running, open the index.html in your output folder. You will be prompted to select a database to read from.
+
+Select the .db file inside your output folder. It should have the same name as your output folder, so in the example command above it should be `JK1_tutorial_out.db`.
+
+[This section](https://github.com/medema-group/BiG-SCAPE/wiki/02.-BiG-SCAPE-Workflows#output-interactive-visualization) contains an overview of all the exploration options that are available.
 
 Now let's add a few higher distance cutoffs, and see how the GCF architectures might change.
 
