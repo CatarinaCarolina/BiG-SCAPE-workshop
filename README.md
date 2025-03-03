@@ -1,9 +1,9 @@
 # BiG-SCAPE-workshop
-Expanded tutorial materials created for genome mining with BiG-SCAPE 2.0
 
-ADD INTRO
+Expanded tutorial materials created for hands-on session of Genome Mining Workshops.
 
-### BiG-SCAPE Cluster
+
+### Installing BiG-SCAPE 2.0
 
 [Install BiG-SCAPE](https://github.com/medema-group/BiG-SCAPE/wiki/01.-Installing-and-Running-BiG-SCAPE) and download (and unzip) this [dataset](https://zenodo.org/records/14446826).
 
