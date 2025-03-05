@@ -1,7 +1,11 @@
 # BiG-SCAPE-workshop
 
-Expanded tutorial materials created for hands-on session of Genome Mining Workshops.
+Expanded tutorial materials for the hands-on session of several 2025 Genome Mining for Natural Product Discovery Workshops.
 
+## BiG-SCAPE Documentation
+The official documentation for antiSMASH can be found [here](https://github.com/medema-group/BiG-SCAPE/wiki).
+
+------------
 
 ### Installing BiG-SCAPE 2.0
 
@@ -32,6 +36,8 @@ Commands:
 ```
 - Unzipped the Pfam-A models somewhere and remembered its location
 - Unzipped the example data somewhere and remembered its location
+
+------------
 
 #### Running BiG-SCAPE 2
 
@@ -88,6 +94,8 @@ Try finding the GCFs that are linked by topological links. (Hint: you need to se
 bigscape cluster -i JK1_tutorial/ -o JK1_tutorial_out -p /pfam/Pfam-A.hmm --mix --record-type protocluster --label protocluster
 ```
 
+------------
+
 ### BiG-SCAPE Query
 
 With `bigscape query` you can provide BiG-SCAPE with a query BGC record, and use BiG-SCAPE to find all other records that share similarity to the query BGC. For this tutorial, we have just selected a random `.gbk` record from the same dataset we are already using.
@@ -122,6 +130,8 @@ Find or generate an antiSMASH processed GBK of the MIBiG entry with ID BGC000066
 query -i JK1_tutorial/ -o JK1_tutorial_out -p pfam/Pfam-A.hmm --query-bgc-path path_to_gbk/your_gbk_here.gbk
 ```
 
+------------
+
 ### BiG-SCAPE Benchmark
 
 `bigscape benchmark` is designed for checking how well BiG-SCAPE groups BGCs into families, provided you, the user, has a curated/predefined set of BGC -> GCF assignments. Furthermore, `bigscape benchmark` has only been developed to work with a `bigscape cluster` `mix` mode run, in which the input BGC records are compared in an all-vs-all manner. So let’s first re-run `bigscape cluster`.
@@ -137,6 +147,8 @@ bigscape benchmark --BiG-dir JK1_tutorial_out_mix -o JK1_tutorial_benchmark_out 
 ```
 
 Also explore if running `bigscape cluster` with any other settings (cutoffs, alignment or extend modes, etc) will give you better or worse benchmark scores.
+
+------------
 
 ### BiG-SCAPE SQLite DB 
 
@@ -227,6 +239,8 @@ AND bgc2.record_type == 'protocluster'
 AND bgc1.record_number== '2'
 AND bgc2.record_number== '2'
 ```
+
+------------
 
 ### Loading BiG-SCAPE output into Cytoscape
 
