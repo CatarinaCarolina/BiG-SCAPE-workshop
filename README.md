@@ -3,7 +3,7 @@
 Expanded tutorial materials for the hands-on session of several 2025 Genome Mining for Natural Product Discovery Workshops.
 
 ## BiG-SCAPE Documentation
-The official documentation for antiSMASH can be found [here](https://github.com/medema-group/BiG-SCAPE/wiki).
+The official documentation for BiG-SCAPE can be found [here](https://github.com/medema-group/BiG-SCAPE/wiki).
 
 ------------
 
