@@ -6,6 +6,13 @@ Expanded tutorial materials for the hands-on session of several 2025 Genome Mini
 The official documentation for BiG-SCAPE can be found [here](https://github.com/medema-group/BiG-SCAPE/wiki).
 
 ------------
+## Assumed knowledge
+
+We assume you have basic understanding of commandline usage. If that is not the case, please consider following [this tutorial](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview) _before_ the dedicated BiG-SCAPE session.
+
+If you are working in windows with Windows Subsystem for Linux (WSL), we recommend working fully within the WSL partition during the workshop, includig downloading (or transferring) the input dataset as well as PFAM database direclty into your WSL partition. At the very least you should have an understanding of how to navigate these partitions _before_ the start the of the BiG-SCAPE session.
+
+------------
 
 ### Installing BiG-SCAPE 2.0
 
